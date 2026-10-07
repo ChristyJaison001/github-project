@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Elite Motors | Car Dealership</title>
 
 <style>
@@ -28,7 +29,7 @@ align-items: center;
 }
 
 .logo {
-font-size: 26px;
+font-size: 28px;
 font-weight: bold;
 }
 
@@ -40,18 +41,19 @@ margin-left: 25px;
 
 .hero {
 min-height: 500px;
-background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
 url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80");
 background-size: cover;
 background-position: center;
 display: flex;
 align-items: center;
-padding: 8%;
+justify-content: center;
+text-align: center;
 color: white;
 }
 
 .hero h1 {
-font-size: 52px;
+font-size: 55px;
 margin-bottom: 15px;
 }
 
@@ -70,17 +72,17 @@ border-radius: 5px;
 font-weight: bold;
 }
 
-.cars {
+section {
 padding: 60px 8%;
 }
 
-.cars h2 {
+section h2 {
 text-align: center;
 font-size: 35px;
 margin-bottom: 40px;
 }
 
-.car-grid {
+.cars {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 gap: 25px;
@@ -90,7 +92,7 @@ gap: 25px;
 background: white;
 border-radius: 10px;
 overflow: hidden;
-box-shadow: 0 4px 15px rgba(0,0,0,.12);
+box-shadow: 0 4px 15px rgba(0,0,0,.15);
 }
 
 .car img {
@@ -103,23 +105,55 @@ object-fit: cover;
 padding: 20px;
 }
 
-.car-info h3 {
+.car h3 {
 font-size: 23px;
 margin-bottom: 10px;
 }
 
+.car p {
+margin: 8px 0;
+color: #555;
+}
+
 .price {
-font-size: 20px;
+font-size: 22px;
 font-weight: bold;
+color: #e63946;
 margin: 15px 0;
+}
+
+.about {
+background: #111;
+color: white;
+text-align: center;
+}
+
+.about p {
+max-width: 750px;
+margin: auto;
+line-height: 1.7;
+}
+
+.contact {
+text-align: center;
 }
 
 footer {
 background: #111;
 color: white;
 text-align: center;
-padding: 30px;
-margin-top: 30px;
+padding: 25px;
+}
+
+@media(max-width:700px) {
+header {
+flex-direction: column;
+gap: 15px;
+}
+
+.hero h1 {
+font-size: 38px;
+}
 }
 </style>
 </head>
@@ -130,13 +164,14 @@ margin-top: 30px;
 <div class="logo">ELITE MOTORS</div>
 
 <nav>
-<a href="#">Home</a>
+<a href="#home">Home</a>
 <a href="#cars">Cars</a>
+<a href="#about">About</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
 <div>
 <h1>Find Your Dream Car</h1>
 <p>Premium cars. Trusted service. Best deals.</p>
@@ -144,27 +179,27 @@ margin-top: 30px;
 </div>
 </section>
 
-<section class="cars" id="cars">
+<section id="cars">
 <h2>Featured Cars</h2>
 
-<div class="car-grid">
+<div class="cars">
 
 <div class="car">
 <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=800&q=80">
 <div class="car-info">
 <h3>BMW 3 Series</h3>
-<p>2023 • Automatic • Petrol</p>
+<p>2024 • Automatic • Petrol</p>
 <div class="price">₹45,00,000</div>
 <a href="#contact" class="button">Enquire Now</a>
 </div>
 </div>
 
 <div class="car">
-<img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=800&q=80">
 <div class="car-info">
-<h3>Mercedes C-Class</h3>
-<p>2023 • Automatic • Petrol</p>
-<div class="price">₹55,00,000</div>
+<h3>Mercedes-Benz C-Class</h3>
+<p>2024 • Automatic • Petrol</p>
+<div class="price">₹58,00,000</div>
 <a href="#contact" class="button">Enquire Now</a>
 </div>
 </div>
@@ -182,10 +217,31 @@ margin-top: 30px;
 </div>
 </section>
 
-<footer id="contact">
-<h2>ELITE MOTORS</h2>
+<section class="about" id="about">
+<h2>About Elite Motors</h2>
+
+<p>
+Elite Motors is a premium car dealership offering quality new
+and pre-owned vehicles. Our goal is to make buying your dream
+car simple, transparent and enjoyable.
+</p>
+</section>
+
+<section class="contact" id="contact">
+<h2>Contact Us</h2>
+
 <p>📞 +91 98765 43210</p>
 <p>📧 sales@elitemotors.in</p>
+<p>📍 Kerala, India</p>
+
+<br>
+
+<a href="mailto:sales@elitemotors.in" class="button">
+Contact Dealer
+</a>
+</section>
+
+<footer>
 <p>© 2026 Elite Motors. All Rights Reserved.</p>
 </footer>
 
